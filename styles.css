@@ -27,6 +27,8 @@ body {
   display: grid;
   grid-template-columns: 20% 1fr;
   grid-template-rows: auto 1fr;
+  gap: 2rem;
+  margin: 1rem 0;
 }
 
 aside {
@@ -39,6 +41,7 @@ aside {
   justify-items: flex-start;
   row-gap: 3rem;
   padding-left: 3rem;
+  box-shadow: 4px 1px 6px -5px #0c0b0c;
 }
 
 aside h2 {
@@ -77,8 +80,108 @@ nav ul li img {
 
 header {
   background-color: #a7f3d0;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  padding: 2rem 0;
+  box-shadow: 0px 3px 6px -5px #0c0b0c;
+}
+
+header > div {
+  display: grid;
+  grid-template-rows: auto auto;
+  align-items: center;
+}
+
+.search {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 1rem 5rem;
+}
+
+.search img {
+  width: 3rem;
+}
+
+.search input {
+  border-radius: 2rem;
+  border: none;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  padding: 1rem 2rem;
+}
+
+.bell {
+  width: 3rem;
+}
+
+.user-img {
+  width: 4rem;
+  border-radius: 50%;
+}
+
+.notification h2 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.user-greeting {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-row: 1fr;
+  gap: 4rem;
+  margin-left: 5rem;
+}
+
+.user-greeting img {
+  width: 8rem;
+  border-radius: 50%;
+}
+
+.user-greeting > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.btns-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+  justify-items: center;
+}
+
+.btns-container button {
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 main {
   background-color: #99f6e4;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+
+  display: grid;
+  grid-template-columns: 1fr 20%;
+}
+
+main > div {
+  border: 1px solid #d946ef;
+}
+
+.main-right {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
