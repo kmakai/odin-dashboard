@@ -5,6 +5,10 @@ html {
   font-family: "Manrope", sans-serif;
 }
 
+ul {
+  list-style: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +20,7 @@ html {
 body {
   width: 100vw;
   height: 100vh;
-  background-color: #fafafa;
+  background-color: #e2e8f0;
 
   display: flex;
   justify-content: center;
@@ -41,7 +45,7 @@ aside {
   justify-items: flex-start;
   row-gap: 3rem;
   padding-left: 3rem;
-  box-shadow: 4px 1px 6px -5px #0c0b0c;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.46);
 }
 
 aside h2 {
@@ -86,7 +90,7 @@ header {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   padding: 2rem 0;
-  box-shadow: 0px 3px 6px -5px #0c0b0c;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.46);
 }
 
 header > div {
@@ -169,19 +173,148 @@ header > div {
 }
 
 main {
-  background-color: #99f6e4;
+  /* background-color: #99f6e4; */
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 
   display: grid;
   grid-template-columns: 1fr 20%;
+  column-gap: 2rem;
 }
 
-main > div {
-  border: 1px solid #d946ef;
+.main-left {
+  /* border: 1px solid #d946ef; */
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.main-left h2 {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.project {
+  background-color: #fff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.46);
+  border-radius: 1rem;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 2rem;
+}
+
+.project h3 {
+  font-size: 2rem;
+}
+
+.project p {
+  font-size: 1.4rem;
+}
+
+.icons {
+  justify-self: end;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+.icons img {
+  width: 2rem;
 }
 
 .main-right {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  row-gap: 5rem;
+}
+
+.right-top,
+.right-bot {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  row-gap: 1rem;
+  align-items: flex-start;
+}
+
+.right-top > div,
+.trending {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.46);
+}
+
+.right-top h2 {
+  font-size: 2.4rem;
+}
+
+.announcements {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+
+  padding: 2rem;
+}
+
+.announcement:not(:last-child) {
+  border-bottom: 1px solid grey;
+  padding-bottom: 2rem;
+}
+
+.a-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.a-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1.2;
+}
+
+.right-bot h2 {
+  font-size: 2.4rem;
+}
+
+.trending ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.trending ul li {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.trending ul li img {
+  width: 3rem;
+  border-radius: 5rem;
+  border: 1px solid #a7f3d0;
+  padding: 0.5rem;
+}
+
+.trending {
+  padding: 2rem;
+}
+.t-tag {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.t-quote {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
