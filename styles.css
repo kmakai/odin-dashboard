@@ -20,7 +20,7 @@ ul {
 body {
   width: 100vw;
   height: 100vh;
-  background-color: #e2e8f0;
+  background: linear-gradient(#374151, #111827);
 
   display: flex;
   justify-content: center;
@@ -38,7 +38,12 @@ body {
 aside {
   grid-column: 1 / 2;
   grid-row: 1 / -1;
-  background-color: #bbf7d0;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.562),
+    rgba(255, 255, 255, 0.144)
+  );
+  color: #fff;
 
   display: grid;
   grid-template-rows: auto 1fr;
@@ -53,6 +58,7 @@ aside h2 {
   justify-content: flex-start;
   align-items: center;
   font-size: 4rem;
+  transition: transform 0.3s;
 }
 
 nav {
@@ -76,6 +82,14 @@ nav ul li {
   font-size: 2rem;
   font-weight: 700;
   gap: 1rem;
+  transition: transform 0.3s;
+}
+
+nav ul li:hover,
+aside h2:hover,
+.project:hover {
+  transform: scale(1.06);
+  cursor: pointer;
 }
 
 nav ul li img {
@@ -83,7 +97,12 @@ nav ul li img {
 }
 
 header {
-  background-color: #a7f3d0;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.562),
+    rgba(255, 255, 255, 0.144)
+  );
+  color: #fff;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 
@@ -204,7 +223,12 @@ main {
 }
 
 .project {
-  background-color: #fff;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.308),
+    rgba(255, 255, 255, 0.144)
+  );
+  color: #fff;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.46);
   border-radius: 1rem;
   padding: 2rem;
@@ -212,6 +236,7 @@ main {
   display: grid;
   grid-template-rows: auto 1fr auto;
   gap: 2rem;
+  transition: transform 0.3s;
 }
 
 .project h3 {
@@ -249,7 +274,12 @@ main {
 
 .right-top > div,
 .trending {
-  background-color: #fff;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.351),
+    rgba(255, 255, 255, 0.381)
+  );
+  color: #fff;
   border-radius: 1rem;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.46);
 }
@@ -270,6 +300,7 @@ main {
 .announcement:not(:last-child) {
   border-bottom: 1px solid grey;
   padding-bottom: 2rem;
+  transition: transform 0.3s;
 }
 
 .a-title {
@@ -317,4 +348,11 @@ main {
 .t-quote {
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+.main-right ul li:hover,
+.announcement:hover,
+button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
